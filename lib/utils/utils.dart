@@ -50,6 +50,9 @@ class Utils {
     }
     return null;
   }
+  static  getFirstName(String inputString){
+
+  }
 
   static String? getHexFromColor(Color color) {
     String colorString = color.toString(); // Color(0x12345678)

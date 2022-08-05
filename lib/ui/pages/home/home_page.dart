@@ -81,6 +81,11 @@ class _HomePageState extends State<HomePage>
   }
 
   Widget _buildSuccessList(List<MovieEntity> items) {
+    final List<MovieEntity> detailSlider = [
+      items[0],
+      items[1],
+      items[2],
+    ];
     final List<String> popularSlider = [
       items[0].backdropPath ?? "",
       items[1].backdropPath ?? "",
@@ -95,14 +100,13 @@ class _HomePageState extends State<HomePage>
           const SizedBox(height: 20),
           _buildSearchBar(),
           Padding(
-            padding: const EdgeInsets.only(left: 50, top: 20, bottom: 20),
+            padding: const EdgeInsets.only(left: 50, top: 20),
             child: Text(
               "Most Popular",
               style: AppTextStyle.titleTextStyle,
             ),
           ),
-          _buildMostPopularMovie(popularSlider),
-          const SizedBox(height: 20),
+          _buildMostPopularMovie(popularSlider, detailSlider),
           _buildCategoryMovies(),
           Padding(
             padding: const EdgeInsets.only(left: 50, top: 20, bottom: 20),
@@ -111,7 +115,7 @@ class _HomePageState extends State<HomePage>
               style: AppTextStyle.titleTextStyle,
             ),
           ),
-          _buildUpcomingMovies(popularSlider),
+          _buildUpcomingMovies(popularSlider, detailSlider),
         ],
       ),
     );
@@ -134,18 +138,22 @@ class _HomePageState extends State<HomePage>
     );
   }
 
-  Widget _buildMostPopularMovie(List<String> listSlider) {
+  Widget _buildMostPopularMovie(
+      List<String> listImageSlider, List<MovieEntity> listDetailSlider) {
     return CarouselSliderCustom(
-      listImage: listSlider,
+      listImage: listImageSlider,
+      listDetailMovie: listDetailSlider,
     );
     // return const MoviesPage(section: MovieCategory.trending);
   }
 
-  Widget _buildUpcomingMovies(List<String> listSlider) {
+  Widget _buildUpcomingMovies(
+      List<String> listImageSlider, List<MovieEntity> listDetailSlider) {
     return CarouselSliderCustom(
       height: 214,
       viewportFraction: 0.8,
-      listImage: listSlider,
+      listImage: listImageSlider,
+      listDetailMovie: listDetailSlider,
     );
     // return const MoviesPage(section: MovieCategory.upcoming);
   }
