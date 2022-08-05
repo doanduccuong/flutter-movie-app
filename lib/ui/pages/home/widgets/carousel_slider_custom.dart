@@ -4,6 +4,7 @@ import 'package:flutter_base/common/app_colors.dart';
 import 'package:flutter_base/models/entities/movie_entity.dart';
 import 'package:flutter_base/router/route_config.dart';
 import 'package:flutter_base/ui/pages/detail_movie/detail_movie_page.dart';
+import 'package:flutter_base/ui/pages/detail_movie/widget/category_container.dart';
 import 'package:get/get_core/src/get_main.dart';
 import 'package:get/get_navigation/src/extension_navigation.dart';
 
@@ -40,6 +41,9 @@ class _CarouselSliderCustomState extends State<CarouselSliderCustom> {
                       onTap: () => Get.offNamed(RouteConfig.detailMoviePage,
                           arguments: DetailMovieArgument(movieEntity: item)),
                       child: Container(
+                        alignment: Alignment.bottomRight,
+                        width: 328,
+                        padding: const EdgeInsets.only(bottom: 10, right: 10),
                         margin: const EdgeInsets.symmetric(horizontal: 19),
                         decoration: BoxDecoration(
                             image: DecorationImage(
@@ -48,6 +52,10 @@ class _CarouselSliderCustomState extends State<CarouselSliderCustom> {
                                     "https://image.tmdb.org/t/p/w500/${item.backdropPath}")),
                             borderRadius: BorderRadius.circular(10),
                             color: AppColors.backgroundDark),
+                        child: CategoryContainer(
+                          title: 'IMDb ${item.voteAverage}',
+                          backgroundColor: AppColors.scoreBackgroundColor,
+                        ),
                       ),
                     ))
                 .toList(),

@@ -20,6 +20,7 @@ class DetailMoviePage extends StatefulWidget {
 
 class _DetailMoviePageState extends State<DetailMoviePage> {
   final movieData = Get.arguments as DetailMovieArgument;
+
   @override
   Widget build(BuildContext context) {
     SchedulerBinding.instance.addPostFrameCallback((timeStamp) {
@@ -31,7 +32,9 @@ class _DetailMoviePageState extends State<DetailMoviePage> {
         ),
         context: context,
         builder: (BuildContext context) {
-          return  ModalBottomSheetCustom(movieData: movieData.movieEntity,);
+          return ModalBottomSheetCustom(
+            movieData: movieData.movieEntity,
+          );
         },
       );
     });
@@ -39,10 +42,13 @@ class _DetailMoviePageState extends State<DetailMoviePage> {
       body: Container(
         width: double.infinity,
         decoration: BoxDecoration(
-            image: DecorationImage(
-                fit: BoxFit.fill,
-                image: NetworkImage(
-                    "https://image.tmdb.org/t/p/w500/${movieData.movieEntity.backdropPath}"))),
+          image: DecorationImage(
+            fit: BoxFit.fill,
+            image: NetworkImage(
+              "https://image.tmdb.org/t/p/w500/${movieData.movieEntity.backdropPath}",
+            ),
+          ),
+        ),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [

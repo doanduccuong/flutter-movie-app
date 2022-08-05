@@ -58,6 +58,7 @@ dependencies:
   #Dialog, etc
   cached_network_image: ^3.2.0
   carousel_slider: ^4.1.1
+  readmore: ^2.2.0
 
 dev_dependencies:
   flutter_test:

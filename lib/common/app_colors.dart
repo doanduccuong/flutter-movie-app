@@ -6,12 +6,20 @@ class AppColors {
   ///Common
   static const Color primary = Color(0xFFD9251D);
   static const Color secondary = Color(0xFF47CFFF);
+  static const Color third=Color(0xFFA2E6FA);
 
   ///Background
   static const Color backgroundLight = Color(0xFFFFFFFF);
   static const Color backgroundDark = Color(0xFF0F1B2B);
-  static const Color firstLinearBackGroundColor=Color(0xFF64ABDB);
-  static const Color secondLinearBackGroundColor=Color(0xFF826ECB);
+  static const Color firstLinearBackGroundColor = Color(0xFF64ABDB);
+  static const Color secondLinearBackGroundColor = Color(0xFF826ECB);
+  static const Color scoreBackgroundColor = Color(0xFFF5C518);
+
+
+
+  ///Botomsheet background color
+  static const Color bottomSheetLinearFirstColor = Color(0xFF2B5876);
+  static const Color bottomSheetLinearSecondColor = Color(0xFF4E4376);
 
 
   ///Shadow
@@ -28,7 +36,8 @@ class AppColors {
   static const Color textBlack = Color(0xFF000000);
   static const Color textBlue = Color(0xFF0000FF);
   static const Color textDisable = Color(0xFF89a3b1);
-  static  Color textWhite05= textWhite.withOpacity(0.5);
+  static Color textWhite05 = textWhite.withOpacity(0.5);
+
   ///TextField
   static const Color textFieldEnabledBorder = Color(0xFF919191);
   static const Color textFieldFocusedBorder = Color(0xFFd74315);

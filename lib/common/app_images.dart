@@ -8,6 +8,8 @@ class AppImages {
   static const inTheaterImage = 'assets/images/in_theater_image.png';
   static const movieRollImage = 'assets/images/movies_roll_image.png';
   static const tvSeriesImage = 'assets/images/tv_series_images.png';
+  static const heartIconColor = 'assets/images/heart_icon.png';
+  static const shareIconColor = 'assets/images/share_icon.png';
 
   ///Sign-In
   static const icEyeClose = 'assets/images/ic_eye_close.png';
