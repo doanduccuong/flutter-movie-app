@@ -45,15 +45,16 @@ class ModalBottomSheetCustom extends StatelessWidget {
               maxLines: 2,
             ),
             Padding(
-              padding: EdgeInsets.symmetric(horizontal: 50, vertical: 20),
+              padding: const EdgeInsets.symmetric(horizontal: 50, vertical: 20),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  const CategoryContainer(title: 'Action'),
-                  const CategoryContainer(title: '16+'),
+                  const CategoryContainer(title: 'Action', textSize: 12),
+                  const CategoryContainer(title: '16+', textSize: 12),
                   CategoryContainer(
                     title: 'IMDb ${movieData.voteAverage ?? ""}',
                     backgroundColor: AppColors.scoreBackgroundColor,
+                    textSize: 12,
                   ),
                   Image.asset(AppImages.shareIconColor),
                   Image.asset(AppImages.heartIconColor),
@@ -61,7 +62,7 @@ class ModalBottomSheetCustom extends StatelessWidget {
               ),
             ),
             Padding(
-              padding: const EdgeInsets.only(left: 50,right: 27),
+              padding: const EdgeInsets.only(left: 50, right: 27),
               child: ReadMoreText(
                 movieData.overview ?? "",
                 trimCollapsedText: "More",
@@ -79,9 +80,10 @@ class ModalBottomSheetCustom extends StatelessWidget {
     );
   }
 }
-Widget _buildCastField(){
+
+Widget _buildCastField() {
   return Padding(
-    padding: const EdgeInsets.symmetric(horizontal: 50,vertical: 16),
+    padding: const EdgeInsets.symmetric(horizontal: 50, vertical: 16),
     child: Column(
       children: [
         Row(

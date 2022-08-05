@@ -5,19 +5,26 @@ import 'package:flutter_base/common/app_text_styles.dart';
 class CategoryContainer extends StatelessWidget {
   final String title;
   final Color? backgroundColor;
-  const CategoryContainer({Key? key, required this.title, this.backgroundColor}) : super(key: key);
+  final double? textSize;
+
+  const CategoryContainer({
+    Key? key,
+    required this.title,
+    this.backgroundColor,
+    this.textSize,
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Container(
       padding: const EdgeInsets.symmetric(vertical: 4, horizontal: 6),
       decoration: BoxDecoration(
-          color: backgroundColor??Colors.transparent,
+          color: backgroundColor ?? Colors.transparent,
           borderRadius: BorderRadius.circular(12),
           border: Border.all(color: AppColors.textBlack)),
       child: Text(
         title,
-        style: AppTextStyle.white.copyWith(fontSize: 6),
+        style: AppTextStyle.white.copyWith(fontSize: textSize ?? 6),
       ),
     );
   }
