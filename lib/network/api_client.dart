@@ -5,6 +5,7 @@ import 'package:retrofit/retrofit.dart';
 import '../models/entities/movie_entity.dart';
 import '../models/entities/notification/notification_entity.dart';
 import '../models/entities/token_entity.dart';
+import 'model/collection_response.dart';
 
 part 'api_client.g.dart';
 
@@ -31,5 +32,10 @@ abstract class ApiClient {
   Future<ArrayResponse<MovieEntity>> getMovies(
     @Query('api_key') String apiKey,
     @Query('page') int page,
+  );
+  @GET("/collection")
+  Future<CollectionResponse> getTestResponse(
+    @Query('collection_id') String collectionId,
+    @Query('api_key') String apiKey,
   );
 }

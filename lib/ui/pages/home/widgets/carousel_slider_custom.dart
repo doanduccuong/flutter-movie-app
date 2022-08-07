@@ -38,8 +38,8 @@ class _CarouselSliderCustomState extends State<CarouselSliderCustom> {
             carouselController: _controller,
             items: widget.listDetailMovie
                 .map((item) => InkWell(
-                      onTap: () => Get.offNamed(RouteConfig.detailMoviePage,
-                          arguments: DetailMovieArgument(movieEntity: item)),
+                      // onTap: () => Get.offNamed(RouteConfig.detailMoviePage,
+                      //     arguments: DetailMovieArgument(movieEntity: item)),
                       child: Container(
                         alignment: Alignment.bottomRight,
                         width: 328,

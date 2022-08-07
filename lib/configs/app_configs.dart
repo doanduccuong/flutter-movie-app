@@ -1,5 +1,7 @@
 import 'dart:ui';
 
+import 'package:flutter_base/repositories/movie_repository.dart';
+
 import 'app_env_config.dart';
 
 class AppConfigs {

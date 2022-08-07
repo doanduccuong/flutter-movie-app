@@ -1,7 +1,7 @@
 import 'package:dio/dio.dart';
 import 'package:flutter_base/repositories/auth_repository.dart';
+import 'package:flutter_base/route_config/route_name_config.dart';
 import 'package:flutter_base/ui/commons/app_dialog.dart';
-import 'package:flutter_base/ui/pages/main/main_page.dart';
 import 'package:flutter_base/ui/pages/sign_in/sign_in_page.dart';
 import 'package:flutter_base/utils/logger.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -9,14 +9,16 @@ import 'package:get/get.dart';
 
 import '../../../repositories/user_repository.dart';
 import 'splash_state.dart';
-
+import 'package:flutter/material.dart';
 class SplashCubit extends Cubit<SplashState> {
   final AuthRepository authRepo;
   final UserRepository userRepo;
+  final BuildContext context;
 
   SplashCubit({
     required this.authRepo,
     required this.userRepo,
+    required this.context,
   }) : super(const SplashState());
 
   void checkLogin() async {
@@ -50,7 +52,7 @@ class SplashCubit extends Cubit<SplashState> {
         );
         return;
       }
-      Get.offAll(() => const MainPage());
+      // Navigator.pushNamed(context, RouteNameConfgi.homePage);
     }
   }
 }

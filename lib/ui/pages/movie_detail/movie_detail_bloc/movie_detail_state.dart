@@ -1,4 +1,6 @@
-part of 'movie_detail_cubit.dart';
+part of 'movie_detail_bloc.dart';
+
+@immutable
 
 abstract class MovieDetailState extends Equatable {
   @override

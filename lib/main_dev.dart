@@ -4,11 +4,10 @@ import 'package:hydrated_bloc/hydrated_bloc.dart';
 import 'package:path_provider/path_provider.dart';
 
 import 'app.dart';
-import 'configs/app_configs.dart';
-import 'configs/app_env_config.dart';
+
 
 void main() async {
-  AppConfigs.env = Environment.dev;
+
   WidgetsFlutterBinding.ensureInitialized();
   final storage = await HydratedStorage.build(
       storageDirectory: kIsWeb
@@ -19,3 +18,4 @@ void main() async {
     storage: storage,
   );
 }
+

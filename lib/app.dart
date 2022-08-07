@@ -1,12 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_base/configs/app_configs.dart';
+import 'package:flutter_base/route_config/route_name_config.dart';
+import 'package:flutter_base/route_config/router.dart';
 import 'package:flutter_base/ui/pages/splash/splash_page.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:get/get.dart';
-
 import 'blocs/app_cubit.dart';
+import 'route_config/router.dart' as router;
 import 'blocs/setting/app_setting_cubit.dart';
 import 'common/app_themes.dart';
 import 'generated/l10n.dart';
@@ -16,7 +18,6 @@ import 'repositories/auth_repository.dart';
 import 'repositories/movie_repository.dart';
 import 'repositories/user_repository.dart';
 import 'router/route_config.dart';
-
 class MyApp extends StatefulWidget {
   const MyApp({Key? key}) : super(key: key);
 
@@ -78,7 +79,7 @@ class _MyAppState extends State<MyApp> {
               onTap: () {
                 _hideKeyboard(context);
               },
-              child: GetMaterialApp(
+              child: MaterialApp(
                 title: AppConfigs.appName,
                 home: const SplashPage(),
                 theme: AppThemes(
@@ -90,8 +91,8 @@ class _MyAppState extends State<MyApp> {
                   primaryColor: state.primaryColor,
                 ).theme,
                 themeMode: state.themeMode,
-                initialRoute: RouteConfig.splash,
-                getPages: RouteConfig.getPages,
+                initialRoute: RouteNameConfgi.homePage,
+                onGenerateRoute: router.generateRoute,
                 localizationsDelegates: const [
                   GlobalMaterialLocalizations.delegate,
                   GlobalWidgetsLocalizations.delegate,

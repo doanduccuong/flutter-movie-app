@@ -62,6 +62,7 @@ class _HomePageState extends State<HomePage>
           ),
         ),
         child: Scaffold(
+          resizeToAvoidBottomInset: false,
           backgroundColor: Colors.transparent,
           body: BlocBuilder<MoviesCubit, MoviesState>(
             bloc: _cubit,
