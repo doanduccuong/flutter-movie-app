@@ -14,4 +14,20 @@ class AppImages {
   ///Sign-In
   static const icEyeClose = 'assets/images/ic_eye_close.png';
   static const icEyeOpen = 'assets/images/ic_eye_open.png';
+
+  ///actor image
+  static const chris = 'assets/images/chris.png';
+  static const natalie = 'assets/images/natalie.png';
+  static const tom = 'assets/images/tom.png';
+  static const kat = 'assets/images/kat.png';
+  static const hopkins = 'assets/images/hopkins.png';
+
+  ///actor
+  static const actor = [
+    [chris, 'Chris Hemsworth', 'Thor'],
+    [natalie, 'Natalie Portman', 'Jane Foster'],
+    [tom, 'Tom Hiddleston', 'Loki'],
+    [kat, 'Kat Dennings', 'Darcy Lewis'],
+    [hopkins, 'Anthony Hopkins', 'Odin']
+  ];
 }

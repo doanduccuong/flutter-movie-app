@@ -1,10 +1,10 @@
 part of 'movie_detail_bloc.dart';
 
 @immutable
-abstract class DetailMovieEvent {}
+abstract class MovieDetailEvent {}
 
-class MovieDetailInitialEvent extends DetailMovieEvent {}
+class MovieDetailInitialEvent extends MovieDetailEvent {}
 
-class MovieDetailLoadingEvent extends DetailMovieEvent {}
+class MovieDetailLoadingEvent extends MovieDetailEvent {}
 
-class MovieDetailLoadedEvent extends DetailMovieEvent {}
+class MovieDetailLoadedEvent extends MovieDetailEvent {}

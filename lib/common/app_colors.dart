@@ -1,12 +1,14 @@
 import 'dart:ui';
 
+import 'package:flutter/material.dart';
+
 class AppColors {
   AppColors._();
 
   ///Common
   static const Color primary = Color(0xFFD9251D);
   static const Color secondary = Color(0xFF47CFFF);
-  static const Color third=Color(0xFFA2E6FA);
+  static const Color third = Color(0xFFA2E6FA);
 
   ///Background
   static const Color backgroundLight = Color(0xFFFFFFFF);
@@ -15,12 +17,9 @@ class AppColors {
   static const Color secondLinearBackGroundColor = Color(0xFF826ECB);
   static const Color scoreBackgroundColor = Color(0xFFF5C518);
 
-
-
   ///Botomsheet background color
   static const Color bottomSheetLinearFirstColor = Color(0xFF2B5876);
   static const Color bottomSheetLinearSecondColor = Color(0xFF4E4376);
-
 
   ///Shadow
   static const Color shadow = Color(0x25606060);
@@ -54,4 +53,9 @@ class AppColors {
 
   ///BottomNavigationBar
   static const Color bottomNavigationBar = Color(0xFF919191);
+
+  static const gradientButtonColor = LinearGradient(colors: [
+    Color(0x4ca6a1e0),
+    Color(0x4ca1f3fe),
+  ]);
 }

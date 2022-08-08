@@ -6,16 +6,14 @@ import 'package:flutter_base/ui/pages/home/home_page.dart';
 Route<dynamic>? generateRoute(RouteSettings settings) {
   switch (settings.name) {
     case RouteNameConfgi.homePage:
-      return MaterialPageRoute(
-          builder: (_) => const HomePage(), settings: settings);
+      return MaterialPageRoute(builder: (_) =>  const HomePage(),settings: settings);
     case RouteNameConfgi.detailMoviePage:
-      return MaterialPageRoute(
-          builder: (_) => const DetailMoviePage(), settings: settings);
+      return MaterialPageRoute(builder: (_) =>  const DetailMoviePage(),settings: settings);
     default:
       return MaterialPageRoute(
           builder: (_) => Container(
                 alignment: Alignment.center,
-                child: Text("Undefined page route ${settings.name ?? ""}"),
+                child: const Text("Undefined page route"),
               ));
   }
 }

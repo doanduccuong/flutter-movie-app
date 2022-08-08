@@ -17,9 +17,14 @@ class CategoryMoviesItem extends StatelessWidget {
       width: 69,
       alignment: Alignment.center,
       decoration: BoxDecoration(
+         gradient: const LinearGradient(colors: [
+          Color(0x4ca6a1e0),
+        Color(0x4ca1f3fe),
+        ]),
         borderRadius: BorderRadius.circular(10),
         border: Border.all(color: AppColors.textWhite, width: 0.2),
       ),
+
       child: ConstrainedBox(
         constraints: const BoxConstraints(
           maxHeight: 95,

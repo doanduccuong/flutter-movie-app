@@ -3,8 +3,11 @@ import 'package:flutter/material.dart';
 import 'package:flutter_base/common/app_colors.dart';
 import 'package:flutter_base/models/entities/movie_entity.dart';
 import 'package:flutter_base/route_config/route_name_config.dart';
+import 'package:flutter_base/router/route_config.dart';
 import 'package:flutter_base/ui/pages/detail_movie/detail_movie_page.dart';
 import 'package:flutter_base/ui/pages/detail_movie/widget/category_container.dart';
+import 'package:get/get_core/src/get_main.dart';
+import 'package:get/get_navigation/src/extension_navigation.dart';
 
 class CarouselSliderCustom extends StatefulWidget {
   final double? height;

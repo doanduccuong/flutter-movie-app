@@ -112,7 +112,7 @@ class _HomePageState extends State<HomePage>
           Padding(
             padding: const EdgeInsets.only(left: 50, top: 20, bottom: 20),
             child: Text(
-              "Upcoming realeases",
+              "Upcoming releases",
               style: AppTextStyle.titleTextStyle,
             ),
           ),
@@ -188,13 +188,23 @@ class _HomePageState extends State<HomePage>
       child: TextFormField(
         controller: _searchBarController,
         decoration: InputDecoration(
-          contentPadding: const EdgeInsets.symmetric(vertical: 14),
+          focusedBorder: OutlineInputBorder(
+            borderRadius: BorderRadius.circular(30),
+            borderSide: BorderSide(color: Colors.white),
+          ),
           enabledBorder: OutlineInputBorder(
-            borderRadius: BorderRadius.circular(25.0),
-            borderSide: const BorderSide(
-              color: AppColors.textWhite,
-              width: 2.0,
-            ),
+            borderRadius: BorderRadius.circular(30),
+            borderSide: BorderSide(color: Colors.white),
+          ),
+          border: OutlineInputBorder(
+            borderSide: BorderSide(color: Colors.white),
+            borderRadius: BorderRadius.circular(30),
+          ),
+          hintText: 'Search',
+          hintStyle: const TextStyle(
+            color: Color(0x4cffffff),
+            fontSize: 18,
+            fontWeight: FontWeight.w400,
           ),
           prefixIcon: const Icon(
             Icons.search,
@@ -203,12 +213,6 @@ class _HomePageState extends State<HomePage>
           suffixIcon: Icon(
             Icons.mic,
             color: AppColors.textWhite05,
-          ),
-          hintText: "Search",
-          hintStyle: TextStyle(
-            color: AppColors.textWhite05,
-            fontSize: 18,
-            fontWeight: FontWeight.w400,
           ),
         ),
       ),

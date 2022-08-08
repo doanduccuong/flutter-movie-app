@@ -29,8 +29,8 @@ class MovieRepositoryImpl extends MovieRepository {
 
   @override
   Future<CollectionResponse?> getCollectionData(
-      {required String collectionId}) async {
-    return await apiClient.getTestResponse(collectionId, MovieAPIConfig.apiKey);
+      {required String collectionId}) {
+    return apiClient.getTestResponse(collectionId, MovieAPIConfig.apiKey);
   }
 
 // Future<CollectionResponse?> getCollectionData(String collectionId) async {

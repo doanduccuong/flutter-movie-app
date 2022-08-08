@@ -15,6 +15,15 @@ class AppTextStyle {
   static final blackS14 = black.copyWith(fontSize: 14);
   static final blackS14Bold = blackS14.copyWith(fontWeight: FontWeight.bold);
   static final blackS14W800 = blackS14.copyWith(fontWeight: FontWeight.w800);
+  static const textStyleMedium = TextStyle(
+      fontWeight: FontWeight.w500, color: Color(0xffffffff), fontSize: 12);
+  static const textStyleBold = TextStyle(
+      fontWeight: FontWeight.w700, color: Color(0xffffffff), fontSize: 64);
+  static const  textStyleRegular = TextStyle(
+    fontSize: 8,
+    fontWeight: FontWeight.w500,
+    color: Color(0xffffffff),
+  );
 
   //s16
   static final blackS16 = black.copyWith(fontSize: 14);
@@ -28,7 +37,8 @@ class AppTextStyle {
 
   ///White
   static const white = TextStyle(color: Colors.white);
-  static  TextStyle titleTextStyle=white.copyWith(fontSize: 18,fontWeight: FontWeight.w700,height: 22.77/18);
+  static TextStyle titleTextStyle = white.copyWith(
+      fontSize: 18, fontWeight: FontWeight.w700, height: 22.77 / 18);
 
   //s12
   static final whiteS12 = white.copyWith(fontSize: 12);

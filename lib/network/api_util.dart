@@ -1,5 +1,6 @@
 import 'package:dio/dio.dart';
 import 'package:flutter_base/configs/app_configs.dart';
+
 import 'api_client.dart';
 import 'api_interceptors.dart';
 
